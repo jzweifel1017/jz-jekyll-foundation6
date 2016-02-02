@@ -4253,7 +4253,10 @@ table.hover tr:nth-of-type(even):hover {
 #PTitle,
 #PDetails,
 .co-nav,
-.co-footnav {
+.co-footnav,
+.open-jobs h2,
+.open-jobs .jobcosearch label,
+.job-paging:nth-child(1) {
   display: none; }
 
 /***************************************************************
@@ -4262,70 +4265,67 @@ KILLS
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
 
+ol {
+  margin: 0; }
+
+/****************************************************************
+GENERAL STYLES
+****************************************************************/
 /***************************************************************
-DEFAULT CLASSES
+SECTIONS
 ***************************************************************/
-.text-left {
-  text-align: left !important; }
+.section {
+  padding: 50px 0; }
 
-.text-right {
-  text-align: right !important; }
-
-.text-center {
-  text-align: center !important; }
-
-.float-right {
-  float: right; }
-
-.float-left {
-  float: left; }
-
-.center-div {
-  display: block;
-  margin: 0 auto; }
-
-.table-center {
-  width: 100%;
-  height: 100vh;
-  display: table; }
-
-.table-cell-center {
-  display: table-cell;
-  vertical-align: middle;
+/***************************************************************
+TEXT & BUTTONS
+***************************************************************/
+.align-center {
   text-align: center; }
 
-.ul-horizontal {
-  list-style-type: none;
-  margin-left: 70px; }
+.white {
+  color: #fff; }
 
-.li-horizontal {
-  display: inline; }
+.black {
+  color: #000; }
 
-.text-white {
-  color: #ECF0F1 !important; }
+#body-h1 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  margin: 0; }
 
-.text-black {
-  color: #000 !important; }
+#body-h2 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 30px; }
 
-.text-purple {
-  color: #332586 !important; }
+#body-h3 {
+  font-weight: 100;
+  font-size: 24px;
+  font-family: "Raleway", Helvetica, Arial, sans-serif; }
 
-.text-grey {
-  color: #515151 !important; }
+#body-p, ul li {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300; }
 
-.text-gold {
-  color: #E89B30 !important; }
-
-.text-shadow {
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); }
+.btn {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  border-radius: 1px;
+  padding: 10px 0;
+  color: #ECF0F1;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all .2s ease; }
 
 /***************************************************************
 NAVIGATION
 ***************************************************************/
-.main-logo {
-  height: 65px;
-  padding: 10px 0; }
-
 .main-nav {
   background: black;
   float: left;
@@ -4366,50 +4366,41 @@ NAVIGATION
   background: #56459D; }
 
 /***************************************************************
-TEXT & BUTTONS
+FOOTER
 ***************************************************************/
-.body-h1 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 50px !important;
-  margin: 0; }
+.main-foot {
+  width: 100%;
+  background-color: #666;
+  padding: 30px 10px;
+  min-height: 200px; }
 
-.body-h2 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 30px !important; }
+.main-foot-inner {
+  display: block;
+  margin: 0 auto;
+  max-width: 960px; }
 
-.body-h3 {
-  font-weight: 100;
-  font-size: 24px !important;
-  font-family: "Raleway", Helvetica, Arial, sans-serif; }
+#CompHTMLPageBottom {
+  background-color: #666;
+  background-size: cover;
+  position: relative; }
 
-.body-p, ul li {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 300; }
+#footerpowered {
+  min-height: 16px;
+  margin: 0;
+  background-color: #666;
+  padding-bottom: 20px; }
 
-.btn {
-  display: inline-block;
-  width: 250px;
-  height: 50px;
-  text-align: center;
-  border-radius: 1px;
-  padding: 10px 0;
-  color: #ECF0F1;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  transition: all .2s ease; }
+#footerpowered .PoweredBy {
+  width: 84px;
+  font-size: 11px;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif; }
 
-/***************************************************************
-SECTIONS
-***************************************************************/
 /**********************************************************************************************************
-GENERAL STYLES
-**********************************************************************************************************/
-/**********************************************************************************************************
-JOB LIST / OPEN JOBS / SEARCH TOOLS - START
+JOB SEARCH
 **********************************************************************************************************/
 .jobcosearch {
   width: 100%;
@@ -4423,11 +4414,6 @@ JOB LIST / OPEN JOBS / SEARCH TOOLS - START
 fieldset {
   border: none !important; }
 
-.cc fieldset, .cc-facebook fieldset, .co-content fieldset {
-  border: 1px solid #ddd;
-  padding: 0;
-  margin: 10px 0 10px 0; }
-
 #cosearch ol {
   text-align: center; }
 
@@ -4436,6 +4422,8 @@ fieldset {
   margin: 0 2px; }
 
 #company-profile-main .open-jobs .jobcosearch label {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-weight: 100;
   font-size: 18px;
   width: 100px;
   overflow: hidden;
@@ -4443,46 +4431,36 @@ fieldset {
   float: left;
   clear: both;
   padding: 3px 0;
-  color: #fff;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 100; }
-
-.open-jobs #cosearch li #cosearchbutton {
-  color: #fff !important;
-  text-align: center !important;
-  cursor: pointer !important;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  position: relative !important;
-  width: 150px !important;
-  background: #E89B30 !important;
-  font-size: 16px !important;
-  font-weight: 900 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.05em !important;
-  padding: 7px !important;
-  -moz-transition: all .45s ease-in-out !important;
-  -o-transition: all .45s ease-in-out !important;
-  height: 41px !important; }
+  color: #fff; }
 
 input.text,
 input.title {
-  max-width: 350px;
+  max-width: 250px;
   padding: 5px; }
 
+/*GOOD BASE JOBS BTN STYLING*/
+.open-jobs input#cosearchbutton {
+  color: white !important;
+  font-family: 'Open Sans', sans-serif !important;
+  height: 44px !important;
+  width: 214px !important;
+  border-radius: 0 !important;
+  font-size: 18px !important;
+  background: #F16F30 !important;
+  border: 2px solid transparent !important; }
+
+/**********************************************************************************************************
+JOB LIST
+**********************************************************************************************************/
 #main-job-list-container {
-  max-width: 960px;
+  max-width: 1000px;
   display: block;
   margin: 0 auto; }
 
 .title {
   text-align: left;
   display: block;
-  font-weight: bolder;
   font-size: 18px; }
-
-#main-job-list-container {
-  max-width: 960px;
-  margin: 0 auto; }
 
 #PContent .job-list {
   margin: 20px 0; }
@@ -4491,22 +4469,22 @@ input.title {
   display: block;
   color: #222;
   background: #fff;
-  -moz-transition: all .2s ease;
-  -webkit-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  transition: all .2s ease;
   text-align: left;
   position: relative;
-  padding: 15px; }
+  padding: 15px;
+  transition: all .3s; }
 
 .job-list li ul li a:hover {
   background: #353B3B;
   color: #fff;
-  text-decoration: none;
-  -moz-transition: all .2s ease;
-  -o-transition: all .2s ease;
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease; }
+  text-decoration: none; }
+
+.open-jobs {
+  max-width: 980px;
+  display: block;
+  background: #fff;
+  margin: 10px auto 0 auto;
+  padding: 0 0 50px 0; }
 
 .open-jobs h2 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
@@ -4522,34 +4500,8 @@ input.title {
   display: block;
   margin: 0 auto; }
 
-.open-jobs {
-  max-width: 980px;
-  display: block;
-  background: #fff;
-  margin: 10px auto 0 auto;
-  padding: 0 0 50px 0; }
-
 #PContent .job-list li ul li {
   margin: 0 15px !important; }
-
-.job-list li ul li a {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  text-align: left;
-  color: #333;
-  font-weight: 600;
-  font-size: 16px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Raleway", Helvetica, Arial, sans-serif; }
-
-.job-list li ul li a .title {
-  font-weight: 600; }
-
-.job-list li ul li a .location {
-  font-weight: 200; }
 
 .job-list li ul li,
 #PContent .job-list li ul li {
@@ -4557,51 +4509,16 @@ input.title {
   padding: 0px;
   margin: 0px; }
 
-.job-list li ul li:nth-child(odd) a {
-  background: #f4f4f4; }
-
-.job-list li ul li a:hover {
-  color: #fff;
-  background: #332586;
-  text-decoration: none; }
-
-#job-detail #PContentContainer {
-  max-width: 1100px;
-  margin: 0px auto 0 auto; }
-
-#job-detail .inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 50px 20px; }
-
-#job-detail .co-nav li a {
-  color: #353B3B;
-  text-shadow: none; }
-
-.job-body ul,
-.job-body ol {
-  margin-left: 20px; }
-
-.job-body li {
-  list-style: disc; }
-
-.job-body strong,
-.job-body b {
-  font-weight: 600; }
-
-.job-body em {
-  font-style: italic; }
-
-#job-list-page #PTitle {
+.open-jobs:before {
+  font-family: 'Open Sans', sans-serif;
+  content: 'COMPANY NAME JOBS';
+  font-size: 24px;
+  max-width: 318px;
   display: block;
-  margin-top: 125px;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  text-align: center;
-  color: #332586; }
+  margin: 0 auto 40px auto; }
 
-.page-joblist .open-jobs {
-  padding-top: 100px; }
+.open-jobs {
+  padding: 80px 0 50px 0; }
 
 /**********************************************************************************************************
 JOB DETAIL PAGE - START
@@ -4609,6 +4526,14 @@ JOB DETAIL PAGE - START
 #job-detail .inner {
   max-width: 960px;
   margin: 0 auto; }
+
+#job-detail .co-nav li a {
+  color: #353B3B;
+  text-shadow: none; }
+
+#job-detail #PContentContainer {
+  max-width: 1100px;
+  margin: 0px auto 0 auto; }
 
 #job-detail .co-nav li a {
   color: #353B3B;
@@ -4626,39 +4551,49 @@ JOB DETAIL PAGE - START
 .job-body em {
   font-style: italic; }
 
-#job-list-page #PTitle {
-  display: block; }
-
-#job-detail #PTitle h1 {
-  font-weight: 600;
-  font-size: 45px;
-  text-align: center;
-  padding: 80px 0 20px 0;
-  margin: 0 0 30px 0;
-  color: #332586;
-  border-bottom: 4px solid #E89B30;
-  font-size: 33px;
-  font-family: "Raleway", Helvetica, Arial, sans-serif; }
-
-.job-list li ul li a span.title:before {
-  content: 'VIEW JOB';
-  display: block;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
-  color: #fff;
-  font-size: 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-align: right;
-  margin-top: 0px;
-  position: absolute;
-  right: 20px;
-  top: 23px; }
-
 .job-list li ul li a span.title:before {
   display: none !important; }
 
 .job-list li ul li:hover a span.title:before {
   display: block !important; }
+
+/**********************************************************************************************************
+JOBING Page
+**********************************************************************************************************/
+.profile .count {
+  display: none; }
+
+.profile .open-jobs ul li.highlight {
+  margin: 5px 0; }
+
+.profile .open-jobs .title {
+  color: #51527B;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  text-align: left !important; }
+
+.profile .open-jobs .job-location {
+  color: #51527B;
+  font-size: 16px;
+  display: block;
+  text-align: left !important; }
+
+.profile .open-jobs ul li {
+  padding: 10px 0 7px 15px;
+  border-top: 1px solid #eee; }
+
+.profile .open-jobs ul li:hover {
+  background: #51527B; }
+
+.profile .open-jobs ul li:hover a span {
+  color: #fff; }
+
+.profile .result-paging .title {
+  display: none; }
+
+.profile .job-body {
+  padding: 0 20px; }
 
 /**********************************************************************************************************
 SLICK NAV

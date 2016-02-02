@@ -27,10 +27,74 @@ ol {
     margin: 0;
 }
 
+/****************************************************************
+GENERAL STYLES
+****************************************************************/
+
+
+
 /***************************************************************
 SECTIONS
 ***************************************************************/
+.section {
+    padding: 50px 0;
+}
 
+
+
+/***************************************************************
+TEXT & BUTTONS
+***************************************************************/
+.align-center {
+  text-align: center;
+}
+
+.white {
+  color: #fff;
+}
+
+.black {
+  color: #000;
+}
+
+#body-h1 {
+    font-family: $base-font-family;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+}
+#body-h2 {
+    font-family: $base-font-family;
+    font-weight: 100;
+    font-size: 30px;
+}
+#body-h3 {
+    font-weight: 100;
+    font-size: 24px;
+    font-family: $base-font-family;
+}
+#body-p, ul li {
+    font-family: $base-font-family;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    border-radius: 1px;
+    padding: 10px 0;
+    color: #ECF0F1;
+    font-family: $base-font-family;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all .2s ease;
+}
+.btn:hover {
+
+}
 
 /***************************************************************
 NAVIGATION
@@ -74,59 +138,47 @@ NAVIGATION
 .main-nav li.selected {
     background: #56459D;
 }
+
 /***************************************************************
-TEXT & BUTTONS
+FOOTER
 ***************************************************************/
-.body-h1 {
-    font-family: $base-font-family;
-    font-weight: 400;
-    font-size: 50px;
-    margin: 0;
-}
-.body-h2 {
-    font-family: $base-font-family;
-    font-weight: 100;
-    font-size: 30px;
-}
-.body-h3 {
-    font-weight: 100;
-    font-size: 24px;
-    font-family: $base-font-family;
-}
-.body-p, ul li {
-    font-family: $base-font-family;
-    font-size: 16px;
-    font-weight: 300;
-}
-.btn {
-    display: inline-block;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    border-radius: 1px;
-    padding: 10px 0;
-    color: #ECF0F1;
-    font-family: $base-font-family;
-    font-size: 18px;
-    font-weight: 600;
-    transition: all .2s ease;
-}
-.btn:hover {
-
+.main-foot {
+  width: 100%;
+  background-color: #666;
+  padding: 30px 10px;
+  min-height: 200px;
 }
 
+.main-foot-inner {
+    display: block;
+    margin: 0 auto;
+    max-width: 960px;
+}
 
+#CompHTMLPageBottom {
+  background-color: #666;
+  background-size: cover;
+  position:relative;
+}
+#footerpowered {
+  min-height: 16px;
+  margin: 0;
+  background-color: #666;
+  padding-bottom: 20px;
+}
+#footerpowered .PoweredBy {
+  width: 84px;
+  font-size: 11px;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
 
 
 /**********************************************************************************************************
-GENERAL STYLES
-**********************************************************************************************************/
-
-
-
-
-/**********************************************************************************************************
-JOB LIST / OPEN JOBS / SEARCH TOOLS - START
+JOB SEARCH
 **********************************************************************************************************/
 
 .jobcosearch {
@@ -165,6 +217,22 @@ input.title {
     max-width: 250px;
     padding: 5px;
 }
+
+/*GOOD BASE JOBS BTN STYLING*/
+.open-jobs input#cosearchbutton {
+    color: white !important;
+    font-family: 'Open Sans', sans-serif !important;
+    height: 44px !important;
+    width: 214px !important;
+    border-radius: 0 !important;
+    font-size: 18px !important;
+    background: #F16F30 !important;
+    border: 2px solid transparent !important;
+}
+
+/**********************************************************************************************************
+JOB LIST
+**********************************************************************************************************/
 #main-job-list-container {
     max-width: 1000px;
     display: block;
@@ -224,26 +292,17 @@ input.title {
 }
 .open-jobs:before {
     font-family: 'Open Sans', sans-serif;
-    content: 'PROJECTSOURCE POSITIONS';
+    content: 'COMPANY NAME JOBS';
     font-size: 24px;
     max-width: 318px;
     display: block;
     margin: 0 auto 40px auto;
 }
-/*GOOD BASE JOBS BTN STYLING*/
-.open-jobs input#cosearchbutton {
-    color: white !important;
-    font-family: 'Open Sans', sans-serif !important;
-    height: 44px !important;
-    width: 214px !important;
-    border-radius: 0 !important;
-    font-size: 18px !important;
-    background: #F16F30 !important;
-    border: 2px solid transparent !important;
-}
+
 .open-jobs {
     padding: 80px 0 50px 0;
 }
+
 /**********************************************************************************************************
 JOB DETAIL PAGE - START
 **********************************************************************************************************/
@@ -277,72 +336,109 @@ JOB DETAIL PAGE - START
 }
 .job-list li ul li a span.title:before {display:none !important;}
 .job-list li ul li:hover a span.title:before {display: block !important;}
+
+/**********************************************************************************************************
+JOBING Page
+**********************************************************************************************************/
+.profile .count {
+    display:none;
+}
+.profile .open-jobs ul li.highlight {
+    margin: 5px 0;
+}
+.profile .open-jobs .title {
+    color: #51527B;
+    font-weight:bold;
+    font-size: 20px;
+    display: block;
+    text-align: left !important;
+}
+.profile .open-jobs .job-location {
+    color: #51527B;
+    font-size: 16px;
+    display: block;
+    text-align: left !important;
+}
+.profile .open-jobs ul li {
+    padding: 10px 0 7px 15px;
+    border-top: 1px solid #eee;
+}
+.profile .open-jobs ul li:hover {
+    background: #51527B;
+}
+.profile .open-jobs ul li:hover a span {
+    color: #fff;
+}
+.profile .result-paging .title {display:none;}
+.profile .job-body {padding:0 20px;}
+
 /**********************************************************************************************************
 SLICK NAV
 **********************************************************************************************************/
  .slicknav_menu, #menu {
-             display: none;
-         }
-         .slicknav_menutxt {
-             display: none !important;
-         }
-         .slicknav_menu { 
-             background: rgba(0, 0, 0, .8) url(../assets/main-logo-small.png) 10px 8px no-repeat !important;
-             background-size: 80px !important;
-             padding: 15px 20px !important;
-         }
-         .slicknav_menu .slicknav_icon {
-             margin: 0px !important;
-         }
-         .slicknav_btn {
-             background-color: transparent !important; /*** HAMBURGER BACKGROUND COLOR ***/
-             padding: 0.5em 0.625em 0.6em 0.625em !important;
-         }
-         .slicknav_btn:hover {
-             cursor: pointer;
-         }
-         .slicknav_menu .slicknav_icon-bar {
-             background-color: #FFF !important; /*** HAMBURGER BARS COLOR ***/
-         }
-         .slicknav_nav a {
-             padding: 5px 0px 8px 0px !important;
-             margin: 0px !important;
-             text-decoration: none !important;
-             color: white !important;
-             font-size: 16px !important;
-             text-align: center !important;
-             background: none !important;
-             font-weight: 400;
-             letter-spacing: .1em;
-             border-top: 1px solid #eee;
-             line-height: 25px;
-         }
-         .slicknav_nav li:first-child {
-             margin-top: 10px !important;
-         }
-         .slicknav_nav a:hover {
-             border-radius: 0px !important;
-             background: white !important;
-             color: $grey-color !important;
-         }
-         .slicknav_menu {
-             z-index: 9999;
-             position: fixed;
-             left: 0;
-             right: 0;
-             top: 0;
-         }
-        @media (max-width:640px) {
-            .slicknav_menu {
-                display: block;
-            }
-            .co-nav {
-                display: none;
-            }
-            .main-nav {
-                display: none;
-            }
-        }
+     display: none;
+ }
+ .slicknav_menutxt {
+     display: none !important;
+ }
+ .slicknav_menu { 
+     background: rgba(0, 0, 0, .8) url(../assets/main-logo-small.png) 10px 8px no-repeat !important;
+     background-size: 80px !important;
+     padding: 15px 20px !important;
+ }
+ .slicknav_menu .slicknav_icon {
+     margin: 0px !important;
+ }
+ .slicknav_btn {
+     background-color: transparent !important; /*** HAMBURGER BACKGROUND COLOR ***/
+     padding: 0.5em 0.625em 0.6em 0.625em !important;
+ }
+ .slicknav_btn:hover {
+     cursor: pointer;
+ }
+ .slicknav_menu .slicknav_icon-bar {
+     background-color: #FFF !important; /*** HAMBURGER BARS COLOR ***/
+ }
+ .slicknav_nav a {
+     padding: 5px 0px 8px 0px !important;
+     margin: 0px !important;
+     text-decoration: none !important;
+     color: white !important;
+     font-size: 16px !important;
+     text-align: center !important;
+     background: none !important;
+     font-weight: 400;
+     letter-spacing: .1em;
+     border-top: 1px solid #eee;
+     line-height: 25px;
+ }
+ .slicknav_nav li:first-child {
+     margin-top: 10px !important;
+ }
+ .slicknav_nav a:hover {
+     border-radius: 0px !important;
+     background: white !important;
+     color: $grey-color !important;
+ }
+ .slicknav_menu {
+     z-index: 9999;
+     position: fixed;
+     left: 0;
+     right: 0;
+     top: 0;
+ }
+ 
+@media (max-width:640px) {
+    .slicknav_menu {
+        display: block;
+    }
+    .co-nav {
+        display: none;
+    }
+    .main-nav {
+        display: none;
+    }
+}
 /***************************************************************
 MEDIA QUERIES/ VERSIONING
 ***************************************************************/

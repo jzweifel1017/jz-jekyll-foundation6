@@ -15,7 +15,7 @@
 
     <div class="main-nav">
   <div class="main-nav-inner">
-    <!-- <img src="#" class="main-logo" /> -->
+    <img src="#" />
     <ul>
       <li><a href="#">HOME</a></li>
       <li><a href="#">ABOUT</a></li>
@@ -26,12 +26,11 @@
 
     <!-- SLICK NAV -->
     <ul id="menu">
-         <li><a href="http://www.livingspaces.com/" class="active">Back To Main Website</a></li>
-         <li><a href="http://jobs.livingspaces.com/overview">Overview</a></li>
-         <li><a href="http://jobs.livingspaces.com/jobs" >Jobs</a></li>
-         <li><a href="http://jobs.livingspaces.com/about-us" >About Us</a></li>
-         <li><a href="http://jobs.livingspaces.com/career-opportunities" >Career Opportunities</a></li>
-         <li><a href="http://jobs.livingspaces.com/talent-community" >Talent Community</a></li>
+         <li><a href="#">Overview</a></li>
+         <li><a href="#" >Jobs</a></li>
+         <li><a href="#" >About Us</a></li>
+         <li><a href="#" >Career Opportunities</a></li>
+         <li><a href="#" >Talent Community</a></li>
      </ul>
 
   </div>
@@ -42,17 +41,27 @@
 
         
     
-    <div id="main-footer">
-  <div class="row"> 
-    
-  </div>
-</div>
+    <div class="main-foot">
+	<div class="row">
+    <div class="columns small-12 medium-12 large-12">
+        <div class="main-foot-inner">
 
+        </div>
+  	</div>
+	</div>
+</div>
 
 <!--  SLICK NAV -->
 <script src="../js/jquery.min.js"></script>
 <script src="../js/foundation.min.js"></script>
 <script src="https://d2i2zd9axwkr7h.cloudfront.net/company/sites/145182/js/jquery.slicknav.min.js"></script>
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+
+<script> 
+    jQuery('#cosearch input[type=text]').each(function(){
+        jQuery(this).prop('placeholder', 'Keyword Search');
+    });
+</script>
 
  <script>
      $(function(){
